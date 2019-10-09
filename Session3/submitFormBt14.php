@@ -19,6 +19,7 @@ if (isset($_POST['submitRegister'])) {
     }
 }
 ?>
+
 <div>
     <h3>PHIẾU TÍNH TIỀN ĐIỆN</h3>
     <p><?php echo $gioiTinh?> : <?php echo $name?></p>

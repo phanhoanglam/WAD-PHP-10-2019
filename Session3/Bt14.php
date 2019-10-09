@@ -27,15 +27,15 @@
 
 <div class="wrapper">
     <h1> TÍNH TIỀN ĐIỆN </h1>
-    <form name="registerForm" action="submitFormBt14.php" method="POST" onsubmit="return validationForm()">
+    <form name="registerForm" action="submitFormBt14.php" enctype="multipart/form-data"  method="POST" onsubmit="return validationForm()">
         <div id="error" style="color"></div>
         <div>
             <label>Họ tên</label>
             <input class="input1" type="text" name="name" required>
         </div>
-        <!-- <p>Chân dung
+        <p>Chân dung
             <input type="file" name="avatar" required>
-        </p> -->
+        </p>
         <div>
             <label>Ngày sinh</label>
             <input class="input1" type="date" name="birthday" required>
@@ -95,6 +95,8 @@
 
         var electricfirstday = document.forms["registerForm"]["electricfirstday"].value;
         var electriclastday = document.forms["registerForm"]["electriclastday"].value;
+
+        var avatar = document.forms["registerForm"]["avatar"].value;
 
         var gender = document.forms["registerForm"]["gender"].value;
 
