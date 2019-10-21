@@ -27,7 +27,7 @@
 
 <div class="wrapper">
     <h1> TÍNH TIỀN ĐIỆN </h1>
-    <form name="registerForm" action="submitFormBt14.php" enctype="multipart/form-data"  method="POST" onsubmit="return validationForm()">
+    <form name="registerForm" action="submitFormBt14.php" enctype="multipart/form-data" method="POST" onsubmit="return validationForm()">
         <div id="error" style="color"></div>
         <div>
             <label>Họ tên</label>
