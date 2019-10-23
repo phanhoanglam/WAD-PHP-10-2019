@@ -4,16 +4,17 @@
         public $DeliveryAddress;
         public $CustomerCode;
 
-        public function Payout(){
-
+        public function Pay(){
+            echo "Customer pay";
         }
 
         public function History(){
-
+            echo "Customer history";
         }
     }
 
     $customer = new Customer();
     $customer->Register();
-    $customer->Payout();
+    echo '<br />';
+    $customer->Pay();
 ?>
