@@ -1,21 +1,19 @@
-<h3>Add product</h3>
-<div>
+<h3 class="center">Add product</h3>
+
+<div class="form">
     <form method="POST" action="index.php?action=submitAddProduct">
-        <div>
-            <label>Title :</label>
-            <input type="text" name="title" placeholder="Enter title">
+        <div class="form-group">      
+            <input type="text" name="title" class="form-control"  placeholder="Enter title">
         </div>
 
-        <div>
-            <label>Description :</label>
-            <input type="text" name="description" placeholder="Enter description">
+        <div class="form-group">       
+            <input type="text" name="description" class="form-control"  placeholder="Enter description">
         </div>
 
-        <div>
-            <label>Price :</label>
-            <input type="number" name="price" placeholder="Enter price">
+        <div class="form-group">
+            <input type="number" name="price" class="form-control"  placeholder="Enter price">
         </div>
 
-        <button type="submit" name="submitAddProduct">Submit</button>
+        <button type="submit" name="submitAddProduct" class="btn btn-primary">Submit</button>
     </form>
 </div>

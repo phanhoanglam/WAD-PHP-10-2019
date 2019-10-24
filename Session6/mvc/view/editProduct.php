@@ -1,22 +1,20 @@
-<h3>Update product</h3>
-<div>
+<h3 class="center">Update product</h3>
+
+<div class="form">
     <form method="POST" action="index.php?action=submitEditProduct">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <div>
-            <label>Title :</label>
-            <input type="text" name="title" value="<?php echo $title ?>" placeholder="Enter title">
+        <input type="hidden" name="id" value="<?php echo $product['Id'] ?>">
+        <div class="form-group">      
+        <input type="text" name="title" class="form-control" value="<?php echo $product['Title'] ?>" placeholder="Enter title">
         </div>
 
-        <div>
-            <label>Description :</label>
-            <input type="text" name="description" value="<?php echo $description ?>" placeholder="Enter description">
+        <div class="form-group">       
+        <input type="text" name="description" class="form-control" value="<?php echo $product['Description'] ?>" placeholder="Enter description">
         </div>
 
-        <div>
-            <label>Price :</label>
-            <input type="number" name="price" value="<?php echo $price ?>" placeholder="Enter price">
+        <div class="form-group">
+        <input type="number" name="price" class="form-control" value="<?php echo $product['Price'] ?>" placeholder="Enter price">
         </div>
 
-        <button type="submit" name="submitEditProduct">Update</button>
+        <button type="submit" name="submitEditProduct" class="btn btn-primary">Update</button>
     </form>
 </div>

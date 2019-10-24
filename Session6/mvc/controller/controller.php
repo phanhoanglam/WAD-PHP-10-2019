@@ -9,7 +9,6 @@
 					include 'view/home.php';
 					break;
 				case 'news':
-					$newsList = $model->getNews();
 					include 'view/news.php';
 					break;
 				case 'products':
@@ -26,12 +25,7 @@
 					$this->AddProduct();
 					break;
 				case 'EditProduct':
-					$record = $model->getProduct($_GET['id']);
-					$product = mysqli_fetch_array($record);
-					$id = $product['Id'];
-					$title = $product['Title'];
-					$description = $product['Description'];
-					$price = $product['Price'];
+					$product = $this->GetProduct();
 					include 'view/editProduct.php';
 					break;
 				case 'submitEditProduct':
@@ -44,6 +38,13 @@
 					include 'view/home.php';
 					break;
 			}
+		}
+
+		public function GetProduct(){
+			$model = new Model();
+			$record = $model->getProduct($_GET['id']);
+			$product = mysqli_fetch_array($record);
+			return $product;
 		}
 
 		public function AddProduct(){
