@@ -1,4 +1,6 @@
-<?php include 'controller/controller.php'; ?>
+<?php include 'controller/controller.php'; 
+	session_start();
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -16,6 +18,9 @@
 				| <a href="index.php?action=news">News</a>
 				| <a href="index.php?action=products">Products</a>
 				| <a href="index.php?action=contact">Contact</a>
+				<?php if(isset($_SESSION['login'])){ ?>
+				| <a href="index.php?action=logout">Logout</a>
+				<?php } ?>
 			</div>
 		</div>
 		<?php

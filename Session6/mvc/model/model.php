@@ -28,5 +28,11 @@
 				$sql = "DELETE FROM products WHERE Id = $Id";
 				return mysqli_query($this->connect(), $sql);
 			}
+
+			public function Login($username, $password){
+				$sql = "SELECT * FROM users WHERE Username = '$username' AND Password = '$password'";
+				$check = mysqli_query($this->connect(), $sql);
+				return mysqli_fetch_array($check);
+			}
 	}
 ?>
